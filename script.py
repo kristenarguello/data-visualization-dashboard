@@ -378,7 +378,7 @@ mcv = alt.vconcat(
         co2_emissions_scatter.properties(
             title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
             width=700,
-            height=350,
+            height=345,
         ),
         spacing=85,
     ).resolve_scale(color="independent", size="independent"),
