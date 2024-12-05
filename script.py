@@ -347,11 +347,24 @@ gdp_bar_chart = (
 
 mcv = alt.vconcat(
     alt.hconcat(
+        map_graph.properties(
+            title="Urbanization: Urban Population (%) vs. Density (P/Km2)",
+            width=700,
+            height=400,
+        ),
+        health_analysis.properties(
+            title="Health Analysis: Life Expectancy vs. GDP per Capita; with Physicians per Thousand",
+            width=700,
+            height=390,
+        ),
+        spacing=77,
+    ).resolve_scale(color="independent", size="independent"),
+    alt.hconcat(
         alt.vconcat(
-            health_analysis.properties(
-                title="Health Analysis: Life Expectancy vs. GDP per Capita; with Physicians per Thousand",
+            co2_emissions_scatter.properties(
+                title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
                 width=700,
-                height=450,
+                height=400,
             )
         ).resolve_scale(
             color="independent",
@@ -359,28 +372,15 @@ mcv = alt.vconcat(
         ),
         alt.vconcat(
             correlation_chart.properties(
-                width=700, height=169, title="Correlation Matrix of Selected Attributes"
+                width=700, height=134, title="Correlation Matrix of Selected Attributes"
             ),
             gdp_bar_chart.properties(
-                title="Average GDP per Continent", width=700, height=149
+                title="Average GDP per Continent", width=700, height=134
             ),
         ).resolve_scale(
             color="independent",
             size="independent",
         ),
-    ).resolve_scale(color="independent", size="independent"),
-    alt.hconcat(
-        map_graph.properties(
-            title="Urbanization: Urban Population (%) vs. Density (P/Km2)",
-            width=700,
-            height=355,
-        ),
-        co2_emissions_scatter.properties(
-            title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
-            width=700,
-            height=345,
-        ),
-        spacing=85,
     ).resolve_scale(color="independent", size="independent"),
     title=alt.TitleParams(
         text="Analysis of the World Economy and its Impacts",
