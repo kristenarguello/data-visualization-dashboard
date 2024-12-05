@@ -351,7 +351,7 @@ mcv = alt.vconcat(
             health_analysis.properties(
                 title="Health Analysis: Life Expectancy vs. GDP per Capita; with Physicians per Thousand",
                 width=700,
-                height=470,
+                height=450,
             )
         ).resolve_scale(
             color="independent",
@@ -359,10 +359,10 @@ mcv = alt.vconcat(
         ),
         alt.vconcat(
             correlation_chart.properties(
-                width=700, height=179, title="Correlation Matrix of Selected Attributes"
+                width=700, height=169, title="Correlation Matrix of Selected Attributes"
             ),
             gdp_bar_chart.properties(
-                title="Average GDP per Continent", width=700, height=159
+                title="Average GDP per Continent", width=700, height=149
             ),
         ).resolve_scale(
             color="independent",
