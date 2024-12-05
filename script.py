@@ -364,7 +364,7 @@ mcv = alt.vconcat(
             co2_emissions_scatter.properties(
                 title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
                 width=700,
-                height=378,
+                height=370,
             )
         ).resolve_scale(
             color="independent",
@@ -372,10 +372,10 @@ mcv = alt.vconcat(
         ),
         alt.vconcat(
             correlation_chart.properties(
-                width=700, height=134, title="Correlation Matrix of Selected Attributes"
+                width=700, height=130, title="Correlation Matrix of Selected Attributes"
             ),
             gdp_bar_chart.properties(
-                title="Average GDP per Continent", width=700, height=134
+                title="Average GDP per Continent", width=700, height=130
             ),
         ).resolve_scale(
             color="independent",
