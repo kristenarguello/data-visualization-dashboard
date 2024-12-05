@@ -349,13 +349,13 @@ mcv = alt.vconcat(
     alt.hconcat(
         map_graph.properties(
             title="Urbanization: Urban Population (%) vs. Density (P/Km2)",
-            width=700,
-            height=390,
+            width=693,
+            height=385,
         ),
         health_analysis.properties(
             title="Health Analysis: Life Expectancy vs. GDP per Capita; with Physicians per Thousand",
-            width=700,
-            height=380,
+            width=693,
+            height=375,
         ),
         spacing=77,
     ).resolve_scale(color="independent", size="independent"),
@@ -363,7 +363,7 @@ mcv = alt.vconcat(
         alt.vconcat(
             co2_emissions_scatter.properties(
                 title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
-                width=700,
+                width=693,
                 height=360,
             )
         ).resolve_scale(
@@ -372,10 +372,10 @@ mcv = alt.vconcat(
         ),
         alt.vconcat(
             correlation_chart.properties(
-                width=700, height=125, title="Correlation Matrix of Selected Attributes"
+                width=693, height=125, title="Correlation Matrix of Selected Attributes"
             ),
             gdp_bar_chart.properties(
-                title="Average GDP per Continent", width=700, height=125
+                title="Average GDP per Continent", width=693, height=125
             ),
         ).resolve_scale(
             color="independent",
