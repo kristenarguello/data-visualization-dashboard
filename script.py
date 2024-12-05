@@ -350,12 +350,12 @@ mcv = alt.vconcat(
         map_graph.properties(
             title="Urbanization: Urban Population (%) vs. Density (P/Km2)",
             width=700,
-            height=400,
+            height=390,
         ),
         health_analysis.properties(
             title="Health Analysis: Life Expectancy vs. GDP per Capita; with Physicians per Thousand",
             width=700,
-            height=390,
+            height=380,
         ),
         spacing=77,
     ).resolve_scale(color="independent", size="independent"),
