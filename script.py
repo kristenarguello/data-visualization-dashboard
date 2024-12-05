@@ -280,7 +280,7 @@ heatmap = (
     alt.Chart(correlation_matrix)
     .mark_rect()
     .encode(
-        x=alt.X("Variable1:O", title="", axis=alt.Axis(labelAngle=-45)),
+        x=alt.X("Variable1:O", title="", axis=alt.Axis(labelAngle=-30)),
         y=alt.Y("Variable2:O", title="", axis=alt.Axis(labelAngle=0)),
         color=alt.Color(
             "Correlation:Q",
@@ -364,7 +364,7 @@ mcv = alt.vconcat(
             co2_emissions_scatter.properties(
                 title="Pollution Contribution related to Economic Power: GDP vs Land Area (Km2); with CO2 Emissions",
                 width=700,
-                height=400,
+                height=378,
             )
         ).resolve_scale(
             color="independent",
