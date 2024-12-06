@@ -128,7 +128,13 @@ health_analysis = (
         y=alt.Y(
             "Life expectancy:Q",
             title="Life Expectancy",
-            scale=alt.Scale(domain=[0, max(df_health["Life expectancy"]) * (21 / 20)]),
+            scale=alt.Scale(
+                domain=[
+                    min(df_health["Life expectancy"]) * (21 / 20),
+                    max(df_health["Life expectancy"])
+                    * (21 / 20),  # 1.05 to make 5% more space
+                ]
+            ),
         ),
         color=alt.condition(
             (country_select & continent_select),
@@ -328,11 +334,6 @@ gdp_bar_chart = (
             alt.Color("GDP (in $):Q", legend=None, scale=alt.Scale(scheme="greens")),
             alt.value("lightgray"),
         ),
-        # strokeWidth=alt.condition(
-        #     (continent_select),
-        #     alt.value(2),
-        #     alt.value(0.5),
-        # ),
         tooltip=[
             alt.Tooltip("Continent:N", title="Continent"),
             alt.Tooltip("GDP (in $):Q", title="Average GDP (in $)", format=",.2f"),
